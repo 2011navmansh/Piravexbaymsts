@@ -1,0 +1,129 @@
+﻿/* ==========================================================================
+   Kamakhya Guwahati Dibrugarh Update — random image slideshows.
+   Fills [data-kamakhya-slides="full"] (product gallery, whole pool) and
+   [data-kamakhya-slides="card"] (related cards, random subset per load).
+   Images go through wsrv.nl for resized WebP delivery. wsrv.nl refuses
+   i.postimg.cc by host policy, so each pool entry is rendered from its
+   iili.io twin — same file, dashes dropped from the name — and a slide
+   that the proxy drops is retried once against the second weserv host.
+   Timing, random order and lazy loading are driven by main.js
+   (.pc-slideshow + data-int), so keep this script before main.js.
+   ========================================================================== */
+(function () {
+  'use strict';
+
+  /* Gallery is ~900px wide, cards ~500px — each gets its own render width so
+     nobody downloads a 1600px frame for a thumbnail slot. The card width is
+     spelled 'width' on purpose: main.js imageUrl() rewrites mobile 'w=' hits
+     to 1200, which would otherwise upscale a 800px card render. */
+  var OPT_FULL = '&w=1600&output=webp&q=82&we';
+  var OPT_CARD = '&width=800&output=webp&q=82&we';
+  var MIRRORS = [
+    'https://wsrv.nl/?url=https%3A%2F%2Fiili.io%2F',
+    'https://images.weserv.nl/?url=https%3A%2F%2Fiili.io%2F'
+  ];
+  var POOL = [
+    "m2GRSBz0/n-Vp-JDYu.png","SNpqGk27/n-Vp-Jmpj.png","y6Rs9kdc/n-Vp-Jy-Tx.png","x1nf9n9c/n-Vp-VMap.png","433XhP7x/n-Vpd-By-J.png","xCJY6dPD/n-Vpd-K3F.png","KjtbysVf/n-Vpd2EP.png","9M62KjxF/n-Vpd341.png","gchmRnJm/n-Vpd9h-Q.png","nLwpKmBv/n-Vpdf-Yg.png",
+    "JzLNmDyD/n-VX00Lx.png","prjjMRRB/n-VX03g-I.png","k4pG5ZfN/n-VX04k-X.png","fySLSKPS/n-VX081p.png","Vs0nCBnj/n-VX09Wv.png","qqKKH44S/n-VX0dfp.png","WbrGQ61K/n-VX0Eq-Q.png","tTw6cYQP/n-VX0f5X.png","LXb5s7Nr/n-VX0g2I.png","FFYgxQ5Q/n-VX0hk-F.png",
+    "6QHndMMC/n-VX0Iql.png","4ddnsZbc/n-VX0m2S.png","sXqWLvdr/n-VX0o-Xf.png","dDM02CMm/n-VX0Oh-J.png","fLLkDZjW/n-VX0p-Y7.png","L83zs9LS/n-VX0ug-S.png","CM9CP6Sf/n-VX0Wd-P.png","G2HYzvfx/n-VX0xs4.png","y6G36JGz/n-VX1cvt.png","W1Gd751J/n-VX1CYP.png",
+    "V6GrC5LF/n-VX1Ejs.png","7YC7S1zK/n-VX1g-Mx.png","Hs7crYGB/n-VX1Ija.png","N0bL3LXC/n-VX1JTu.png","tT2PN2Dx/n-VX1m-Mv.png","CxkqQFmp/n-VX1N87.png","nVSBsSXh/n-VX1Pc-B.png","d33CHrSX/n-VX1tta.png","25YZpPK9/n-VX1wa-S.png","y84J9MsB/n-VX1z-Tg.png",
+    "0j4wLjTj/n-VX1Zwg.png","fyMVpX2G/n-VX520F.png","9Mr8TRYj/n-VX54k-J.png","QxbQ8Ncc/n-VX555G.png","zGyVsq7k/n-VX59WB.png","sfJQS61s/n-VX5df1.png","kgmpZ5qv/n-VX5Dr-X.png","FHNTpnxr/n-VX5e-LB.png","g0rqB9X3/n-VX5Eq7.png","HsCzWPRx/n-VX5hej.png",
+    "02WzXzpT/n-VX5Hi-P.png","tgrvYtPm/n-VX5i-IR.png","0NJKw9Jx/n-VX5KJa.png","4yvzhsqT/n-VX5l-X2.png","pXqjNGts/n-VX5nxp.png","66FSr0PD/n-VX5p7s.png","d1pW9s56/n-VX5Sr-F.png","Vvwtw2v1/n-VX5ugn.png","fT42tb3G/n-VX5vq-P.png","dQRd6QHb/n-VX5xs-I.png",
+    "8k79f3Zd/n-VX5yk-G.png","g2HTPP0L/n-VX5ZBI.png","13GKNcxF/n-VX71Tv.png","26Kdf0vY/n-VX72Q2.png","htL07bF5/n-VX7cva.png","Y99NV5vN/n-VX7CYu.png","MHf7Z1bY/n-VX7dhl.png","mDXjgbvv/n-VX7g-GS.png","25TF0kS1/n-VX7Ih-Q.png","PxxbcgLn/n-VX7KE7.png",
+    "8zMZmgvs/n-VX7m-MB.png","fb5j8zRf/n-VX7nkb.png","vTCv50Hr/n-VX7Oy-G.png","wBkFn50s/n-VX7Pae.png","ZqmVfsFJ/n-VX7Quj.png","PqdQbpTC/n-VX7REP.png","Mp2DT3LG/n-VX7VCN.png","L5JTqcRm/n-VX7vj4.png","054ZgydK/n-VX7wan.png","WbJ8sc5V/n-VX7X4t.png",
+    "SxCgfb9T/n-VX7Zwx.png","C1gTs4d5/n-VXa-Dr-P.png","CKb95fJd/n-VXa-Eq-N.png","mDyxXFFh/n-VXa-LLQ.png","qvhPfF3p/n-VXa-OX4.png","vBzjLFp6/n-VXa-T0P.png","nLqNrQTb/n-VXa-X7n.png","Fs4ttpxj/n-VXA1Tl.png","0yXHN0pq/n-VXA2LP.png","Kz1bzYKB/n-VXA63g.png",
+    "qqJP9MsB/n-VXa6mb.png","Wb3R8zpq/n-VXa81S.png","dQTvcLPp/n-VXA8ZB.png","0jGB2gC7/n-VXAa-YG.png","cLc0k2yf/n-VXAbn-I.png","mDHnJ1zC/n-VXAcvf.png","nrSPgKVY/n-VXadf-S.png","ZKDGMm0D/n-VXae-Ll.png","3rpMbV2T/n-VXAEj2.png","d1gYTKrK/n-VXAg-G1.png",
+    "VvKx1Qgt/n-VXag29.png","mDvvgyfm/n-VXAGQS.png","mr0XYZXM/n-VXAJIV.png","fRG6Mvcv/n-VXajm-G.png","X7SWj4n7/n-VXAk-TQ.png","mDRJH26r/n-VXal-XR.png","Z5wXdSz6/n-VXAlp4.png","y88bBb3F/n-VXAnkv.png","zvGQx2Nm/n-VXanzx.png","GhFC9Vpg/n-VXAOyx.png",
+    "B609BCt0/n-VXap-YF.png","FHvhZm6C/n-VXAp6X.png","hjXnjGJG/n-VXAPaa.png","tgSyp648/n-VXAQu-R.png","26gDBfvT/n-VXAr6F.png","QCf2sGmj/n-VXar7e.png","zvzs9Xn0/n-VXashx.png","wBfHgNBY/n-VXAsyv.png","yNYBMjsT/n-VXAt-ZN.png","dtvfN1qg/n-VXATQI.png",
+    "x8HSvF3K/n-VXAUCP.png","zB56gXPh/n-VXaug1.png","4dHCGFM9/n-VXAVC7.png","vZGdnhgM/n-VXAw-Yb.png","wBv8fBkq/n-VXAWG9.png","43dkL3QQ/n-VXAX4e.png","3RB6C5Pn/n-VXaxs-V.png","fWYFvXh0/n-VXAY2s.png","YSgBFP2t/n-VXaykg.png","7YVWFkhv/n-VXAz-Ip.png",
+    "rw7LKTkD/n-VXc-ACl.png","yN9CRG1r/n-VXc-KEN.png","Bb3St02M/n-VXc-L9n.png","3Jn8rzNn/n-VXc-Un-R.png","NGxYbZ1N/n-VXc-VCQ.png","Kjmbx52b/n-VXc-WGV.png","d0dcCfQM/n-VXc2QR.png","RZWBSFjm/n-VXcaa9.png","159RQyms/n-VXcg-Gp.png","v878k4dq/n-VXci8X.png",
+    "W1ysgrM4/n-VXckua.png","hGHPWxvP/n-VXcm-Ml.png","yN9CRG1h/n-VXcnvn.png","j5HTpFBq/n-VXcwa1.png","HkFCVmg3/n-VXcz-TG.png","YCZd1qjW/n-VXE0l-V.png","MK47L3w5/n-VXE3AX.png","9Xb1LBzb/n-VXE7ob.png","LskjnH17/n-VXE9Fp.png","PqvFcv0C/n-VXEbe9.png",
+    "Hx20PpW8/n-VXECP4.png","WzTWhWz9/n-VXEelp.png","Hsj0BDqY/n-VXEFNn.png","9fHGm4rF/n-VXEHc-N.png","FFVC24Cg/n-VXEj-WJ.png","fLj5ncCn/n-VXEl-KQ.png","pLp0hnWG/n-VXEMR1.png","NFDNT62C/n-VXEOf-R.png","KznpcSGm/n-VXEPsf.png","1txYZ5Zj/n-VXEQg2.png",
+    "4y26sB9y/n-VXEqo-G.png","jdkcbdHH/n-VXETH7.png","FzNW7WzL/n-VXEUOX.png","X7N1WzTp/n-VXEWDg.png","MG1mV7ht/n-VXEz-SS.png","3NFq1Mz5/n-VXG57I.png","KjhXQDzT/n-VXG6p1.png","Kj2Vtcqf/n-VXG7et.png","Hs3K7gQQ/n-VXGBm-F.png","GmXCrDMF/n-VXGD4R.png",
+    "jSFFZ43b/n-VXGdqx.png","dQGc3pH6/n-VXGg2V.png","W1WQxv3y/n-VXGhk7.png","d1dp7ZBw/n-VXGMrl.png","gkGQJJ6p/n-VXGo-Xa.png","6pWXDchv/n-VXGp-YN.png","3xRqXcBF/n-VXGqe1.png","nr4yW9jP/n-VXGr-YB.png","KjhXQDzF/n-VXGshg.png","m2wxNMGg/n-VXGSr-Q.png",
+    "hGhqGG6G/n-VXGt-Ev.png","zDC48Wvk/n-VXGugp.png","R022VLwk/n-VXGW22.png","g0xfWTLw/n-VXGX7S.png","8cS3LkK5/n-VXGYm-X.png","ZKFm7260/n-VXGyv-I.png","d1yP8xJf/n-VXGZCJ.png","VL8N7j0s/n-VXI1TB.png","gcD9WRtC/n-VXI2LX.png","dVcVxG7q/n-VXI63G.png",
+    "R0MVM9Q8/n-VXI8Qt.png","j2rRFb5c/n-VXIa-Yx.png","HkSssRS6/n-VXIck-Q.png","DwRHgcmg/n-VXId-Xt.png","Kjn8GYwS/n-VXIEh-P.png","vBrJD6Y9/n-VXIFBn.png","Kv0ynLn7/n-VXIfr-G.png","JnHhFx5Y/n-VXIGQ1.png","HLcHWx80/n-VXIIh7.png","bNtvgmw6/n-VXIiv4.png",
+    "YC7mm5zk/n-VXIj3J.png","1td9cFhh/n-VXIk-TN.png","bvtccB43/n-VXIK1s.png","GtQngT6m/n-VXInkl.png","7PC7vMLY/n-VXINv-R.png","qR2Tn5LJ/n-VXIop2.png","x8k1WRyf/n-VXIp6u.png","pV7TKwRd/n-VXIQu2.png","Mp0p2XRc/n-VXIr4s.png","Wb8sXxPm/n-VXIREu.png",
+    "8P6C4Zzv/n-VXIsyl.png","L5r8R1NR/n-VXIt-Z7.png","cL50NYCW/n-VXITQ9.png","bNxZ86fS/n-VXIVCF.png","50y4C3rj/n-VXIvj-I.png","fW6dMt3P/n-VXIw-Yv.png","qRWNBS7n/n-VXIWEg.png","43N7WpMh/n-VXIX4a.png","kXqnNqL9/n-VXIY2j.png","0jLyxwcY/n-VXIZj-S.png",
+    "Mp9v4v1w/n-VXl-ANa.png","X7MFcGkx/n-VXl-D5F.png","zX1bRmJX/n-VXl-GHX.png","1373Bb1L/n-VXl-JS9.png","2SrZMsJ5/n-VXl-L0B.png","bJ7GTWkb/n-VXl-Of2.png","t4BYfYWS/n-VXl-RDJ.png","zffRXnqW/n-VXl-SRe.png","j572Lc9G/n-VXl-THF.png","8CCrPhTz/n-VXl-UOu.png",
+    "sDRQZF3n/n-VXl-WDG.png","rFCd1hm4/n-VXl0l-I.png","fWYksHxn/n-VXl3Au.png","Z5HdSftf/n-VXl6Wx.png","BvwP8Xvm/n-VXl8J9.png","N0yfzbgx/n-VXl9FS.png","gJXX3mXb/n-VXlel-S.png","BZFP6Zf6/n-VXlj-V4.png","GmL4qk8K/n-VXll-KN.png","gjy0KJY9/n-VXlo-KB.png",
+    "3JgGL8t6/n-VXlt-J1.png","JzpGgGjD/n-VXlu-Ag.png","GpFRTfzs/n-VXo-Nv2.png","YS67LP8M/n-VXo-Op-S.png","zD0Jk9Nb/n-VXo-PYQ.png","c4z0pwrH/n-VXo-UCu.png","6qjt5GcG/n-VXo-Zj1.png","HWBptfmz/n-VXo63x.png","3xDYYNvd/n-VXo8Qe.png","63hBgPvK/n-VXob-Cg.png",
+    "SNRm1DQ3/n-VXog-Eb.png","kMfnykC7/n-VXoiv-V.png","xdDYCQGV/n-VXok-T7.png","rm9q3Ht1/n-VXom-Ga.png","wTM940xk/n-VXor4j.png","rsnMFtjZ/n-VXosy-B.png","PJrdjMWX/n-VXot-ZF.png","mgFBBkHS/n-VXovj9.png","1tyQGKY0/n-VXow-Yl.png","sfBffTSc/n-VXR29f.png",
+    "gr9TGzhf/n-VXR3u4.png","bY6YpKsF/n-VXR6VS.png","3x5sTBCD/n-VXR7o-B.png","7LMDcRFg/n-VXR8HG.png","zXKJK3xn/n-VXR9Fn.png","TYWzFSm1/n-VXRa-P1.png","TPTBy3sY/n-VXRAw-Q.png","50KcWWn0/n-VXRGHJ.png","3w7QgBdV/n-VXRho-N.png","66DW8Cf8/n-VXRJ8G.png",
+    "90SjZH71/n-VXRk-Ss.png","DfDVCFSx/n-VXRl-KF.png","28sD5mmb/n-VXROKX.png","TwJwV1dB/n-VXRQUu.png","Xvw7WqC7/n-VXRsf9.png","mgKtRK6W/n-VXRt-Hb.png","3RR6Bb7s/n-VXRT9j.png","XJYMPYKg/n-VXRVNR.png","9MnkNtQp/n-VXRz8b.png","xCnHDWqp/n-VXT0c-G.png",
+    "zfnWQJDc/n-VXT1Sf.png","rpczK5cd/n-VXT3u-V.png","vT8W9psC/n-VXT4o-P.png","mkZQM0sM/n-VXT6V1.png","qq73gysZ/n-VXT7nt.png","59p51N5V/n-VXT8Hx.png","8cFzqHd0/n-VXT93b.png","T3BqS7V3/n-VXTb-Np.png","sf0BwB9y/n-VXTBMF.png","nr5Cz5cX/n-VXTC6g.png",
+    "BvDcGTpP/n-VXTDRR.png","TP91mhYk/n-VXTdy-Q.png","RhPwTXCz/n-VXTg-DB.png","JnznQms1/n-VXTHaj.png","tCMhZSm6/n-VXTho7.png","LXpk4J09/n-VXTLla.png","Vk2BTGjp/n-VXTm-DN.png","1zxwMgSn/n-VXTMAl.png","brdZq8PF/n-VXTo-Fa.png","dt120PnK/n-VXTOKu.png",
+    "Hx9wrTf5/n-VXTPi-F.png","yYMDCwbX/n-VXTqn1.png","gJWycxtS/n-VXTQUJ.png","nrwQmrTZ/n-VXTRt-I.png","vBtr4GpG/n-VXTs-Kg.png","NGb8Yf6b/n-VXTSAQ.png","SshLQn1L/n-VXTt-Hv.png","bNWtNGs4/n-VXTT9R.png","tJrFz2Rg/n-VXTUNV.png","ryh43ZT7/n-VXTuup.png",
+    "vZx5WrJG/n-VXTVN2.png","dt120Pnk/n-VXTw-Pe.png","kgRWxQkv/n-VXTWt-S.png","0Qk6HDBk/n-VXTxc-J.png","tTk6X2xq/n-VXTYMX.png","L8J3xKZ0/n-VXTyx-I.png","bvjSkK00/n-VXTz8v.png","WzSwHsnW/n-VXu-Bb2.png","50LPncTK/n-VXu-Dru.png","nLQThbF7/n-VXu-G0g.png",
+    "TY7cjYhW/n-VXu-Hi-X.png","ZnJLHWrW/n-VXu-Ife.png","v8vhBvsS/n-VXu-KJf.png","nr13f4H7/n-VXu-LL7.png","DwNBhyTw/n-VXu-Mga.png","wjM0nRnf/n-VXu-Nz-N.png","MpHdgfgv/n-VXu-OXI.png","ydmP0m3b/n-VXu-RJj.png","qRsL2sCN/n-VXu-T0u.png","hvn2Yyq4/n-VXu-ZB9.png",
+    "9M5b480g/n-VXu0s1.png","BQQg11Z3/n-VXu2ls.png","sgM4TdZp/n-VXu9Vt.png","HWtzxtgw/n-VXuf-R4.png","659HLm0P/n-VXugd-G.png","cCTBbdmc/n-VXunx-S.png","PJKQRdyj/n-VXuq-Ol.png","9XP89hGw/n-VXur7f.png","xCvRLvb9/n-VXuu-Ub.png","8cTb47hH/n-VXuxs9.png",
+    "sXP2yXbc/n-VXx-Aw7.png","RVpZv2bx/n-VXx-BGs.png","rsCRhg8V/n-VXx-DR2.png","FsT77Y14/n-VXx-G9V.png","JhZrc07y/n-VXx-Jvp.png","52HNypZ3/n-VXx-KZX.png","Yqrvr6rb/n-VXx-MAB.png","bJ1ZJLSm/n-VXx-OKJ.png","DynXWVgb/n-VXx-QS4.png","nzfL67SL/n-VXx-Rt9.png",
+    "FKddth9n/n-VXx-SAN.png","T1CYLsd3/n-VXx-T92.png","9Xt4H8hD/n-VXx-Vw-P.png","HW4J1ZCK/n-VXx-Wt1.png","g25jH1vw/n-VXx0cx.png","RZjCHKBD/n-VXx3u-I.png","T3P59rB1/n-VXx6Vn.png","rprmngJn/n-VXx7ne.png","25bbpCkY/n-VXx89p.png","ydKVfKW0/n-VXx93v.png",
+    "xdMfy8jr/n-VXxdy-N.png","d1Gh1nZh/n-VXxecv.png","Z5DBDWhw/n-VXxgtt.png","Xq8XKJ8p/n-VXxho-F.png","5y3j503J/n-VXxj-Mg.png","rpBdM7sq/n-VXxk-SR.png","ZK5qtJH6/n-VXxo-Ff.png","m2jFCdpx/n-VXxs-KG.png","MZyBKZyq/n-VXxt-Hl.png","T1GpWmnz/n-VXxw-Pa.png",
+    "sxwDQLjT/n-VXxz8l.png","ZqzDG5mN/n-VXY0l9.png","h4ZZSrgr/n-VXY29a.png","J4tgJFKy/n-VXY4x-R.png","KzZpYpRj/n-VXY7ol.png","fb7gDQT4/n-VXYa-PS.png","3NNLXyjM/n-VXYANf.png","XNsmrWKn/n-VXYDRs.png","bNdMb5Lg/n-VXYel1.png","L81bQZc6/n-VXYGHu.png",
+    "CLWv8xRz/n-VXYHc-F.png","qMYFGGZZ/n-VXYho-Q.png","xTkxqzTW/n-VXYJ8g.png","zD22Jj5H/n-VXYKt-R.png","2yt02zTw/n-VXYo-Ft.png","DfxHShQG/n-VXYQUX.png","pTqG5QFS/n-VXYRt4.png","0jjtY6Gz/n-VXYu-AG.png","ZnQwVTjW/n-VXYxc-X.png","W385Qmpf/n-VXz-Dr-J.png",
+    "LXP1P2ws/n-VXz-Hiu.png","PqPZtmMg/n-VXz-KHQ.png","BbDBJx4h/n-VXz-Mgf.png","rwTQFYdY/n-VXz-X5l.png","Fz1V82B4/n-VXz-Zqg.png","W4CZthWL/n-VXz3Ux.png","yxwc5WRf/n-VXz4e-V.png","ydpFmLYP/n-VXz6m-B.png","PfZWpQn2/n-VXz7ON.png","4yThbjR8/n-VXz9Ve.png",
+    "8CtWGZWT/n-VXzgdx.png","zXsF22SN/n-VXziz-P.png","KYz71Xm5/n-VXzl-WX.png","xdrpHTFy/n-VXzmdv.png","FHF36tkK/n-VXzo-WF.png","fyWrL2gh/n-VXzp7R.png","ZqC3TrLp/n-VXzq-OB.png","HnK9gBqZ/n-VXzs-X1.png","4NQpw4dH/n-VXzxig.png","fLNF4Tc0/n-VXzyep.png",
+    "FsgvW80X/n-V49Xk-J.png","3xvXQjJh/n-Vrm-Ggs.png","tTHDMSh8/n-Vrm-PIV.png","fbdB5n0R/n-Vrm-QB1.png","59KLHKXV/n-Vrm-Tga.png","qMgcjVPX/n-Vrm-Vd-G.png","bYmHxNF7/n-Vrm-Xe4.png","Kj0N4mdz/n-Vrm4m-Q.png","GtfyZtW1/n-Vrm7bp.png","wMMNfLbf/n-Vrmaz-N.png",
+    "HxpXMf0c/n-Vrmc-XI.png","Xq1f4QCr/n-Vrmhml.png","5035kx9y/n-Vrmk-B9.png","ZqP6CTdH/n-Vrmlst.png","GmHM8s3w/n-Vrmm-YJ.png","4N8Lx1g9/n-Vrmpkv.png","nhjkcb2G/n-Vrmrkx.png","d0Gjr2z4/n-Vrmv1e.png","050XLsXh/n-Vrmyp-R.png","TP5HS5Bb/n-Vrp-AG9.png",
+    "Rh4sNsh3/n-Vrp-BYG.png","8c4yWRr8/n-Vrp-HIp.png","66rFtRqf/n-Vrp-MCP.png","qqTY2Bb3/n-Vrp-Nyv.png","251PDKLn/n-Vrp-P8G.png","bJbWGST8/n-Vrp-Sn-I.png","4xSSBQ2n/n-Vrp-YYb.png","BQJk661Z/n-Vrp0TQ.png","W4xxbw0C/n-Vrp4Fn.png","fRLPcrKG/n-Vrpavj.png",
+    "Yq8VmH1Q/n-Vrpcyx.png","Y0zPRcZb/n-Vrpjaa.png","RhB8wCsZ/n-Vrpkjp.png","1tp7RhmS/n-Vrpnp4.png","tJpSYSJM/n-Vrpq2s.png","T37ZB61T/n-Vrps9f.png","858nVPVx/n-Vrpx-Tl.png","yxmMG3gP/n-Vrpy-Fe.png","NMHq1zQ6/n-Vry-Ft-V.png","mgLs0jSg/n-Vry5o-N.png",
+    "WzcRSw3D/n-Vry9cu.png","mkWxVyDW/n-Vryd9j.png","pLsHxj0F/n-Vryu-NR.png","L8xpRPCF/n-Vryx-Sa.png","5NpGFVwF/image.png"
+  ];
+
+  function shuffle(a) {
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  /* "KjtbysVf/n-Vpd2EP.png" -> "nVpd2EP.png". Entries without the dashed
+     postimg naming have no iili.io twin, so they are left out. */
+  var FILES = [];
+  for (var f = 0; f < POOL.length; f++) {
+    var name = POOL[f].slice(POOL[f].indexOf('/') + 1);
+    if (name.indexOf('-') > -1) FILES.push(name.replace(/-/g, ''));
+  }
+
+  /* A cold-cache burst makes weserv answer once in a while with a non-image
+     body, which Chrome blocks — the <img> would then stay blank forever.
+     Retry the same file on the mirror host instead of giving up on it. */
+  function srcOf(name, opt, mirror) { return MIRRORS[mirror] + name + opt; }
+
+  function failover(img, name, opt) {
+    var mirror = 0;
+    img.onerror = function () {
+      if (mirror >= MIRRORS.length - 1) { img.onerror = null; return; }
+      mirror++;
+      var url = srcOf(name, opt, mirror);
+      setTimeout(function () { img.src = url; }, 400 * mirror);
+    };
+  }
+
+  function build(box, names, alt, opt) {
+    var frag = document.createDocumentFragment();
+    for (var i = 0; i < names.length; i++) {
+      var img = document.createElement('img');
+      img.className = i === 0 ? 'pc-slide is-active' : 'pc-slide';
+      var src = srcOf(names[i], opt, 0);
+      if (i === 0) img.src = src;
+      else img.setAttribute('data-src', src);
+      img.alt = alt;
+      img.decoding = 'async';
+      img.loading = 'lazy';
+      failover(img, names[i], opt);
+      frag.appendChild(img);
+    }
+    box.appendChild(frag);
+  }
+
+  document.querySelectorAll('[data-kamakhya-slides]').forEach(function (box) {
+    var full = box.getAttribute('data-kamakhya-slides') === 'full';
+    var names = shuffle(FILES.slice());
+    if (!full) names = names.slice(0, 16);
+    build(box, names, 'Kamakhya Guwahati Dibrugarh Update — MSTS screenshot',
+          full ? OPT_FULL : OPT_CARD);
+  });
+})();

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="referrer" content="no-referrer">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MSTS Addons bay — Indian routes, locomotives, realistic sounds and mods for Microsoft Train Simulator &amp; Open Rails. One shelf across every collection on Piravexbay.">
+<meta name="theme-color" content="#000000">
+<meta name="google-site-verification" content="H_u_iNG5cy2YmOttO9zhPhmXk99wW3i0dNqr2aH2wd8">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Piravexbay">
+<meta property="og:title" content="MSTS Addons — Piravexbay">
+<meta property="og:url" content="https://piravexbaymsts.dpdns.org/msts-addons.html">
+<meta property="og:description" content="The full Indian MSTS universe — routes, locomotives, sounds and mods. Every collection from one page.">
+<meta property="og:image" content="https://wsrv.nl/?url=https%3A%2F%2Fiili.io%2FnVrpkjp.png&amp;w=1200&amp;h=630&amp;fit=cover&amp;output=jpg&amp;q=82">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://wsrv.nl/?url=https%3A%2F%2Fiili.io%2FnVrpkjp.png&amp;w=1200&amp;h=630&amp;fit=cover&amp;output=jpg&amp;q=82">
+<link rel="canonical" href="https://piravexbaymsts.dpdns.org/msts-addons.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect fill='%23fff' x='2' y='14' width='5' height='8' rx='1.2' opacity='.35'/%3E%3Crect fill='%23fff' x='9.5' y='8' width='5' height='14' rx='1.2' opacity='.65'/%3E%3Crect fill='%23fff' x='17' y='2' width='5' height='20' rx='1.2'/%3E%3C/svg%3E">
+<title>MSTS Addons — Piravexbay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--text:#ecebe6;--line:rgba(255,255,255,.08);--ease:cubic-bezier(.16,1,.3,1);--gutter:clamp(20px,3.4vw,56px);--sans:"Archivo",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}html,body{background:#000;color:var(--text);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}img{display:block;max-width:100%}
+:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.grain{position:fixed;inset:0;z-index:80;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='.85'/></svg>")}
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;height:76px;padding:0 var(--gutter);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;background:linear-gradient(to bottom,#060708e8,transparent)}
+.logo{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:13px;letter-spacing:.16em}
+.logo-tile{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:linear-gradient(180deg,#2a2a2a,#0f0f0f);border:1px solid rgba(255,255,255,.1)}
+.nav-links{display:flex;gap:4px}.nav-links a{padding:16px;font-size:15px;color:rgba(236,235,230,.58)}.nav-links a:hover{color:#fff}
+.roll{position:relative;display:inline-block;overflow:hidden;height:1.25em;line-height:1.25}.roll>span,.roll:after{display:block;transition:transform .55s var(--ease)}.roll:after{content:attr(data-text);position:absolute;left:0;top:100%}.nav-links a:hover .roll>span,.nav-links a:hover .roll:after{transform:translateY(-100%)}
+.nav-cta{justify-self:end;height:40px;padding:0 18px;display:inline-flex;align-items:center;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:#ffffff0a}
+.nav-toggle{display:none}.sheet{position:fixed;inset:0;z-index:60;background:#000;padding:96px var(--gutter);display:none;flex-direction:column;gap:10px}.sheet.open{display:flex}.sheet a{font-size:28px;font-weight:600}
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:140px var(--gutter) 72px;overflow:hidden}
+.slides,.shade{position:absolute;inset:0}.slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.1s var(--ease)}.slide.on{opacity:1}
+.shade{background:linear-gradient(to top,#000 0%,rgba(0,0,0,.55) 42%,rgba(0,0,0,.72));z-index:1}
+.glow{position:absolute;width:42vw;height:42vw;border-radius:50%;filter:blur(80px);opacity:.28;z-index:1;pointer-events:none}
+.glow.a{left:-12vw;top:-8vw;background:#3a3a3a}.glow.b{right:-14vw;bottom:-10vw;background:#1c1c1c}
+.hero .in{position:relative;z-index:2;max-width:1240px}
+.crumbs{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#ffffff80;margin-bottom:18px}
+.crumbs a:hover{color:#fff}
+.eye{display:inline-flex;align-items:center;gap:10px;margin-bottom:16px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#ffffffb3}
+.eye i{width:8px;height:8px;border-radius:2px;background:#fff;box-shadow:0 0 10px #fff}
+h1{font-size:clamp(52px,7.2vw,104px);font-weight:600;letter-spacing:-.055em;line-height:.9}
+.lede{max-width:42em;margin-top:22px;font-size:clamp(17px,1.4vw,21px);color:#ffffffc2}
+.hero-acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.sec{padding:clamp(80px,9vw,120px) var(--gutter);border-top:1px solid var(--line)}
+.wrap{max-width:1240px;margin:0 auto}
+h2{font-size:clamp(34px,4.2vw,60px);font-weight:600;letter-spacing:-.045em;line-height:1.02}
+.feature{display:grid;grid-template-columns:.95fr 1.05fr;min-height:520px;border-radius:32px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:#080809;box-shadow:inset 0 1px rgba(255,255,255,.14)}
+.feature .copy{display:flex;flex-direction:column;justify-content:flex-end;padding:42px}
+.meta{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#ffffff80;margin-bottom:16px}
+.feature p{max-width:34em;color:#ffffffa8;font-size:17px;margin:14px 0 28px}
+.btn{display:inline-flex;align-items:center;height:52px;padding:0 22px;border-radius:10px;border:1px solid #fff;font-weight:600}
+.btn:hover{background:#fff;color:#000}
+.ghost{display:inline-flex;align-items:center;height:52px;padding:0 22px;border-radius:10px;border:1px solid rgba(255,255,255,.22);font-weight:600}
+.frame{position:relative;min-height:360px;background:#111}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s var(--ease)}.frame img.on{opacity:1}
+.frame .bar{position:absolute;inset:0 0 auto 0;z-index:2;height:36px;display:flex;align-items:center;gap:6px;padding:0 14px;background:#0008}
+.frame .bar b{width:8px;height:8px;border-radius:50%;background:#ffffff33}
+.frame .bar span{margin:0 auto;font-family:var(--mono);font-size:11px;color:#ffffff80}
+.note{margin-top:22px;max-width:48em;color:#ffffff8c;font-size:15px}
+.idx{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:start;margin-top:36px}
+.row{display:grid;grid-template-columns:58px 1fr auto;gap:14px;align-items:center;padding:22px 8px;border-top:1px solid rgba(255,255,255,.1);transition:background .35s var(--ease)}
+.row:hover,.row.on{background:#ffffff08}
+.row .n{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:#ffffff70}
+.row h3{font-size:22px;letter-spacing:-.03em;font-weight:600}
+.row p{color:#ffffff8c;font-size:14px;margin-top:4px}
+.row em{font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#fff}
+.side{position:sticky;top:108px;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:#080809}
+.side img{width:100%;height:260px;object-fit:cover}
+.side div{padding:24px}
+.side strong{display:block;font-size:26px;letter-spacing:-.03em;margin:8px 0}
+.side p{color:#ffffffa8}
+.side a{display:inline-block;margin-top:16px;font-weight:600}
+.line{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+.line:before{content:"";position:absolute;left:8%;right:8%;top:7px;height:1px;background:linear-gradient(90deg,transparent,#fff,transparent)}
+.node{position:relative;margin-top:28px;padding:24px 18px;min-height:190px;border-radius:22px;background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02)),#0c0c0e;border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px rgba(255,255,255,.28)}
+.node:before{content:"";position:absolute;left:50%;top:-34px;width:13px;height:13px;margin-left:-6px;border-radius:50%;background:#000;border:2px solid #fff}
+.node b{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:#ffffff80}
+.node h3{margin:12px 0 8px;font-size:20px;letter-spacing:-.03em}
+.node p{color:#ffffff94;font-size:14.5px}
+.node code{font-family:var(--mono);font-size:12px;color:#fff}
+.cta{text-align:center}.cta p{max-width:36em;margin:16px auto 28px;color:#ffffffa8;font-size:18px}
+.acts{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.ft{padding:72px var(--gutter) 28px;border-top:1px solid var(--line)}
+.ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;max-width:1240px;margin:0 auto}
+.ft p{max-width:26em;margin:14px 0;color:#ffffff8c}
+.ft h5{font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.ft ul{list-style:none;display:grid;gap:8px}.ft li a{color:#ffffff8c}.ft a:hover{color:#fff}
+.word{max-width:1240px;margin:40px auto 0;font-size:clamp(52px,14vw,200px);font-weight:700;letter-spacing:-.06em;line-height:.8;text-align:center;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.35)}
+.bottom{max-width:1240px;margin:16px auto 0;padding-top:16px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:#ffffff8c}.bottom span{color:#fff}
+@media(max-width:980px){.nav-links,.nav-cta{display:none}.nav{grid-template-columns:1fr auto}.nav-toggle{display:grid;gap:6px;place-content:center;width:44px;height:44px;border-radius:10px;border:1px solid rgba(255,255,255,.14)}.nav-toggle i{width:18px;height:1.5px;background:#fff}.feature,.idx,.line,.ft-top{grid-template-columns:1fr}.side{position:relative;top:0}.line:before{display:none}.row{grid-template-columns:42px 1fr}.row em{display:none}}
+</style>
+<style id="nav-pill">
+.nav{top:18px;left:50%;right:auto;translate:-50% 0;width:min(1080px,calc(100% - 28px));height:72px;padding:0 10px 0 12px;border-radius:18px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px;background:#0a0a0ccc;border:1px solid rgba(255,255,255,.12);box-shadow:0 18px 50px rgba(0,0,0,.45);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.nav .logo{gap:12px;font-size:13px;letter-spacing:.16em;font-weight:700}
+.nav .logo-tile{display:grid;place-items:center;width:44px;height:44px;flex:none;border-radius:12px;background:linear-gradient(180deg,#2a2a2a,#0f0f0f);border:1px solid rgba(255,255,255,.12)}
+.nav .nav-links{display:flex;justify-content:center;gap:2px;min-width:0}
+.nav .nav-links a{padding:10px 12px;font-size:14.5px;font-weight:500;color:rgba(236,235,230,.62);white-space:nowrap}
+.nav .nav-links a:hover,.nav .nav-links a.is-on{color:#fff}
+.nav .nav-cta{justify-self:end;position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 18px;border-radius:12px;border:1px solid #fff;background:#fff;color:#111;font-size:14.5px;font-weight:650;letter-spacing:-.01em;white-space:nowrap}
+.nav .nav-cta-arrow{position:relative;display:inline-block;overflow:hidden;width:1em;height:1em;line-height:1}
+.nav .nav-cta-arrow>span{display:block;transition:transform .55s cubic-bezier(.16,1,.3,1)}
+.nav .nav-cta-arrow>span+span{position:absolute;top:0;left:0;transform:translate(-120%)}
+.nav .nav-cta:hover{color:#fff;background:#fff;border-color:#fff}
+.nav .nav-cta:before{content:"";position:absolute;inset:0;z-index:-1;background:#111;transform:translateY(101%);transition:transform .55s cubic-bezier(.16,1,.3,1)}
+.nav .nav-cta:hover:before{transform:translateY(0)}
+.nav .nav-cta:hover .nav-cta-arrow>span:first-child{transform:translate(120%)}
+.nav .nav-cta:hover .nav-cta-arrow>span+span{transform:translate(0)}
+@media(max-width:980px){
+  .nav{top:12px;width:min(100% - 16px,1080px);height:64px;padding:0 8px 0 10px;border-radius:16px;grid-template-columns:1fr auto}
+  .nav .nav-links,.nav .nav-cta{display:none}
+  .nav .nav-toggle{display:grid}
+}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<header class="nav"><a class="logo" href="index.html" aria-label="Piravexbay home"><span class="logo-tile"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="2" y="14" width="5" height="8" rx="1.2" fill="currentColor" opacity=".35"></rect><rect x="9.5" y="8" width="5" height="14" rx="1.2" fill="currentColor" opacity=".65"></rect><rect x="17" y="2" width="5" height="20" rx="1.2" fill="currentColor"></rect></svg></span><span>PIRAVEXBAY</span></a><nav class="nav-links" aria-label="Primary"><a href="index.html"><span class="roll" data-text="Home"><span>Home</span></span></a><a class="is-on" href="msts-addons.html"><span class="roll" data-text="Addons"><span>Addons</span></span></a><a href="msts-routes.html"><span class="roll" data-text="Routes"><span>Routes</span></span></a><a href="games.html"><span class="roll" data-text="Games"><span>Games</span></span></a><a href="gallery.html"><span class="roll" data-text="Gallery"><span>Gallery</span></span></a><a href="about-us.html"><span class="roll" data-text="About"><span>About</span></span></a></nav><a class="nav-cta" href="genre.html"><span class="nav-cta-label">Browse Bay</span><span class="nav-cta-arrow" aria-hidden="true"><span>→</span><span>→</span></span></a><button class="nav-toggle" aria-label="Menu"><i></i><i></i><i></i></button></header>
+<div class="sheet" id="sheet">
+  <a href="index.html">Home</a>
+  <a href="msts-addons.html">Addons</a>
+  <a href="msts-routes.html">Routes</a>
+  <a href="msts-sounds.html">Sounds</a>
+  <a href="genre.html">Browse Bay</a>
+</div>
+<main>
+  <header class="hero">
+    <div class="slides">
+      <img class="slide on" src="https://wsrv.nl/?url=https%3A%2F%2Fiili.io%2FnVrpkjp.png&amp;w=1800&amp;output=webp&amp;q=80" alt="Indian Routes">
+      <img class="slide" src="https://i.postimg.cc/L5kL0vVy/image.png" alt="Old MSTS installation files">
+      <img class="slide" src="https://i0.wp.com/i.postimg.cc/52fkcd1h/image.png?w=1600&amp;quality=82" alt="ACE to DDS converter">
+      <img class="slide" src="https://i0.wp.com/i.postimg.cc/jd5dK5Kt/BROAD-GAUGE-PRODUCTIONS-AC-EMU-KHANDESH-SCNERY-UPDATE-MSTS-LIVE-STREAMING-0-18-36.jpg?w=1600&amp;quality=82" alt="BGPro AC EMU">
+    </div>
+    <div class="glow a"></div>
+    <div class="glow b"></div>
+    <div class="shade"></div>
+    <div class="in">
+      <div class="crumbs"><a href="index.html">Home</a> · MSTS Addons</div>
+      <div class="eye"><i></i>Fourteen collections · MSTS + Open Rails</div>
+      <h1>MSTS addons.</h1>
+      <p class="lede">Every Indian Railway collection for Microsoft Train Simulator and Open Rails. Routes, locomotives, realistic sounds, folder backups and mods, reachable from one page.</p>
+      <div class="hero-acts">
+        <a class="btn" href="#shelf">Open the shelf</a>
+        <a class="ghost" href="#install">Install notes</a>
+      </div>
+    </div>
+  </header>
+  <section class="sec">
+    <div class="wrap">
+      <div class="eye"><i></i>Most popular</div>
+      <article class="feature">
+        <div class="copy">
+          <div class="meta">03 · 9 routes · MSTS + Open Rails</div>
+          <h2>Indian Routes.</h2>
+          <p>Coastal Konkan runs, Dehradun’s hill line, ECR Gaya, the Grand Deccan, the Brahmaputra Valley and the MIR Surat section. Full-length Indian mainlines, ready to install.</p>
+          <a class="btn" href="msts-routes.html">Open the routes</a>
+        </div>
+        <div class="frame">
+          <div class="bar"><b></b><b></b><b></b><span>piravexbay / msts-addons</span></div>
+          <img class="on" src="https://wsrv.nl/?url=https%3A%2F%2Fiili.io%2FnVrpkjp.png&amp;w=1400&amp;output=webp&amp;q=80" alt="Indian Routes">
+          <img src="https://wsrv.nl/?url=https%3A%2F%2Fiili.io%2FnVrmGgs.png&amp;w=1400&amp;output=webp&amp;q=80" alt="MIR Surat">
+          <img src="https://wsrv.nl/?url=https%3A%2F%2Fiili.io%2FnVrmXe4.png&amp;w=1400&amp;output=webp&amp;q=80" alt="MIR Surat">
+        </div>
+      </article>
+      <p class="note">Fourteen hand-picked collections, every file verified before it goes live. Rows 15–19 are the newest drops. Open a row to land on that page.</p>
+    </div>
+  </section>
+  <section class="sec" id="shelf">
+    <div class="wrap">
+      <div class="eye"><i></i>The shelf</div>
+      <h2>Nineteen doors. Hover to preview.</h2>
+      <div class="idx">
+        <div class="rows">
+          <a class="row" href="all-things-by-production.html" data-t="All Things by Production" data-d="Complete collections grouped by production. Open one and grab every pack in the set." data-img="https://wsrv.nl/?url=https%3A%2F%2Fiili.io%2FnVpJDYu.png&amp;w=900&amp;output=webp&amp;q=75"><span class="n">01</span><span><h3>All Things by Production</h3><p>All packs · production-wise</p></span><em>Open</em></a>
+          <a class="row" href="msts-new-consist-editor.html" data-t="MSTS New Consist Editor" data-d="Build and edit .con consists visually. Pick locos and coaches, set the order, and save straight into TRAINS\CONSISTS. Full step-by-step video guide included." data-img="https://wsrv.nl/?url=https%3A%2F%2Fiili.io%2FnVrpkjp.png&amp;w=900&amp;output=webp&amp;q=75"><span class="n">02</span><span><h3>MSTS New Consist Editor</h3><p>Consist builder · MSTS + Open Rails</p></span><em>Open</em></a>
+          <a class="row on" href="msts-routes.html" data-t="Indian Routes" data-d="Coastal Konkan runs, Dehradun’s hill line, ECR Gaya, the Grand Deccan, the Brahmaputra Valley and the MIR Surat section. Nine full-length Indian mainlines." data-img="https://wsrv.nl/?url=https%3A%2F%2Fiili.io%2FnVrpkjp.png&amp;w=900&amp;output=webp&amp;q=75"><span class="n">03</span><span><h3>Indian Routes</h3><p>9 routes · most popular</p></span><em>Open</em></a>
+          <a class="row" href="msts-tutorials.html" data-t="MSTS Tutorials" data-d="Learn to install routes, locomotives, sounds and activities, plus fixes for the most common MSTS and Open Rails errors." data-img="https://i.postimg.cc/L5kL0vVy/image.png"><span class="n">04</span><span><h3>MSTS Tutorials</h3><p>Step-by-step guides</p></span><em>Open</em></a>
+          <a class="row" href="old-msts-installation-files-tutorials.html" data-t="Old MSTS installation files" data-d="The original Microsoft Train Simulator installation files plus a full video tutorial on installing and patching MSTS on Windows 11. Two 7z parts, about 2.17 GB." data-img="https://i.postimg.cc/L5kL0vVy/image.png"><span class="n">05</span><span><h3>Old MSTS Installation Files + Tutorials</h3><p>2 parts · ~2.17 GB</p></span><em>Open</em></a>
+          <a class="row" href="msts-sounds.html" data-t="Realistic Sounds" data-d="Horns, engine chugs, traction hums, brake physics and station ambience. Recorded and tested from real Indian trains. 23 sound packs." data-img="https://wsrv.nl/?url=https%3A%2F%2Fiili.io%2FnVrmGgs.png&amp;w=900&amp;output=webp&amp;q=75"><span class="n">06</span><span><h3>Realistic Sounds</h3><p>23 sound packs</p></span><em>Open</em></a>
+          <a class="row" href="msts-reshades.html" data-t="Reshade Presets" data-d="Graphics and lighting packs for MSTS and Open Rails. Realistic daylight, cinematic film looks, deeper nights and monsoon moods. Six .ini presets." data-img="https://wsrv.nl/?url=https%3A%2F%2Fiili.io%2FnVrmXe4.png&amp;w=900&amp;output=webp&amp;q=75"><span class="n">07</span><span><h3>Reshade Presets</h3><p>6 reshades · .ini</p></span><em>Open</em></a>
+          <a class="row" href="activity.html" data-t="Activities" data-d="Ready-to-run MSTS activities and scenarios across Indian Railway routes. Mainlines, hill sections and suburban runs." data-img="https://wsrv.nl/?url=https%3A%2F%2Fiili.io%2FnVpJyTx.png&amp;w=900&amp;output=webp&amp;q=75"><span class="n">08</span><span><h3>Activities</h3><p>Scenarios · plug and play</p></span><em>Open</em></a>
+          <a class="row" href="msts-folder-backup.html" data-t="MSTS Folder Backup" data-d="A complete preinstalled Microsoft Train Simulator folder backup in 6 split 7z parts, about 11.3 GB. Extract once and run. For a clean reinstall or a new PC." data-img="https://i.postimg.cc/L5kL0vVy/image.png"><span class="n">09</span><span><h3>MSTS Folder Backup / Preinstalled</h3><p>6 parts · ~11.3 GB</p></span><em>Open</em></a>
+          <a class="row" href="msts-toolkit-download.html" data-t="MSTS Toolkit" data-d="Route-rite tools, activity editors and MSTS fixes. Ultimate v2.6.2 latest update and v2.5.2 builds, both free." data-img="https://i0.wp.com/i.postimg.cc/52fkcd1h/image.png?w=900&amp;quality=82"><span class="n">10</span><span><h3>MSTS Toolkit</h3><p>Ultimate v2.6.2 · v2.5.2 free</p></span><em>Open</em></a>
+          <a class="row" href="or-new-year-download.html" data-t="Open Rails New Year" data-d="A preinstalled Open Rails New Year pack, reshade-compatible. Drop it in, load Open Rails and run. 144.6 MB." data-img="https://wsrv.nl/?url=https%3A%2F%2Fiili.io%2FnVrmcXI.png&amp;w=900&amp;output=webp&amp;q=75"><span class="n">11</span><span><h3>Open Rails New Year</h3><p>Reshade-compatible · 144.6 MB</p></span><em>Open</em></a>
+          <a class="row" href="msts-blank-folder-download.html" data-t="Blank MSTS Folder" data-d="A blank MSTS folder backup with fresh ROUTES and TRAINS folders. A clean base for reinstalls or a safe rollback. 236.3 MB." data-img="https://i.postimg.cc/L5kL0vVy/image.png"><span class="n">12</span><span><h3>Blank MSTS Folder</h3><p>Blank route + trains · 236.3 MB</p></span><em>Open</em></a>
+          <a class="row" href="ace-to-dds-converter-for-msts.html" data-t="ACE to DDS converter" data-d="Convert folders of MSTS .ace textures to .dds in one run. Portable, no install, packaged as 7z, for MSTS and Open Rails." data-img="https://i0.wp.com/i.postimg.cc/52fkcd1h/image.png?w=900&amp;quality=82"><span class="n">13</span><span><h3>ACE to DDS Converter for MSTS</h3><p>Batch ACE to DDS · 7z</p></span><em>Open</em></a>
+          <a class="row" href="tsre5.html" data-t="TSRE5" data-d="TSRE5 builds and edits real-world MSTS and Open Rails routes. Lay dynamic track, paint terrain from real elevation data, place scenery and signals, and build consists in one 3D editor." data-img="https://wsrv.nl/?url=https%3A%2F%2Fiili.io%2FnVrmazN.png&amp;w=900&amp;output=webp&amp;q=75"><span class="n">14</span><span><h3>TSRE5</h3><p>Route builder · terrain · consists</p></span><em>Open</em></a>
+          <a class="row" href="msts-loop-horn-maker.html" data-t="MSTS Loop Horn Maker" data-d="Make loop horns for MSTS and Open Rails with REAPER 7.43 x64. Record, loop and render horn WAVs, then drop them into the loco sound folder. 16.05 MB." data-img="https://i0.wp.com/i.postimg.cc/284Tkzx4/image.png?w=900&amp;quality=82"><span class="n">15</span><span><h3>MSTS Loop Horn Maker Software</h3><p>Fresh · REAPER · 16.05 MB</p></span><em>Open</em></a>
+          <a class="row" href="mir-surat-update.html" data-t="MIR Surat Update" data-d="Mega Indian Railways Surat section for MSTS and Open Rails. Refreshed station scenery, updated trackwork and the Western Railway atmosphere. 4 RAR parts, about 6.3 GB." data-img="https://wsrv.nl/?url=https%3A%2F%2Fiili.io%2FnVrpkjp.png&amp;w=900&amp;output=webp&amp;q=75"><span class="n">16</span><span><h3>MIR Surat Update</h3><p>Fresh · WR route · ~6.3 GB</p></span><em>Open</em></a>
+          <a class="row" href="bgpro-locos.html?q=wcam" data-t="BGPro WCAM" data-d="Dual AC and DC WCAM workhorse with 3D cab, interiors and authentic dual-mode traction sounds." data-img="https://wsrv.nl/?url=https%3A%2F%2Fiili.io%2FnVpJyTx.png&amp;w=900&amp;output=webp&amp;q=75"><span class="n">17</span><span><h3>BGPro WCAM</h3><p>Fresh · BGPro loco</p></span><em>Open</em></a>
+          <a class="row" href="bgpro-locos.html?q=3-phase" data-t="BGPro 3-Phase Loco Pack 2025" data-d="WAP-7, WAG-9 and WAP-5 in one 2025 pack. GTO/IGBT traction, 3D desk cabs, shed-accurate liveries." data-img="https://wsrv.nl/?url=https%3A%2F%2Fiili.io%2FnVrmcXI.png&amp;w=900&amp;output=webp&amp;q=75"><span class="n">18</span><span><h3>BGPro 3-Phase Loco Pack 2025</h3><p>Fresh · 2025 edition</p></span><em>Open</em></a>
+          <a class="row" href="bgpro-locos.html?q=acemu" data-t="BGPRO-ACEMU.emu" data-d="Ready-to-run AC EMU .emu pack with authentic traction setup, detailed cab view and smooth 25kV performance." data-img="https://i0.wp.com/i.postimg.cc/jd5dK5Kt/BROAD-GAUGE-PRODUCTIONS-AC-EMU-KHANDESH-SCNERY-UPDATE-MSTS-LIVE-STREAMING-0-18-36.jpg?w=900&amp;quality=82"><span class="n">19</span><span><h3>BGPRO-ACEMU.emu</h3><p>Fresh · BGPro EMU</p></span><em>Open</em></a>
+        </div>
+        <aside class="side">
+          <img id="simg" src="https://wsrv.nl/?url=https%3A%2F%2Fiili.io%2FnVrpkjp.png&amp;w=900&amp;output=webp&amp;q=75" alt="Indian Routes">
+          <div>
+            <div class="meta">Live preview</div>
+            <strong id="stitle">Indian Routes</strong>
+            <p id="sline">Coastal Konkan runs, Dehradun’s hill line, ECR Gaya, the Grand Deccan, the Brahmaputra Valley and the MIR Surat section. Nine full-length Indian mainlines.</p>
+            <a id="slink" href="msts-routes.html">Open this shelf →</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+  <section class="sec" id="install">
+    <div class="wrap">
+      <div class="eye"><i></i>Install</div>
+      <h2>Four steps. Routes, locos, sounds, mods.</h2>
+      <div class="line">
+        <article class="node"><b>01</b><h3>Download and extract</h3><p>Download the zip or rar and extract it with WinRAR or 7-Zip.</p></article>
+        <article class="node"><b>02</b><h3>Copy to the right folder</h3><p>Routes go to <code>ROUTES\</code>, locos to <code>TRAINS\TRAINSET\</code>, sounds to <code>SOUNDS\</code>.</p></article>
+        <article class="node"><b>03</b><h3>Run installme.bat</h3><p>If the pack ships <code>installme.bat</code>, run it to pull the required default assets.</p></article>
+        <article class="node"><b>04</b><h3>Launch and run</h3><p>Open MSTS or Open Rails, select the new content, and start the session.</p></article>
+      </div>
+      <p class="note">Each sub-page has its own detailed guide. Use the all-pages index to jump to any route, loco, sound or mod.</p>
+    </div>
+  </section>
+  <section class="sec cta">
+    <div class="eye" style="justify-content:center"><i></i>More shelves</div>
+    <h2>Need a single shelf instead?</h2>
+    <p>Routes, sounds and the full page index sit beside this hub. Same free rule.</p>
+    <div class="acts">
+      <a class="btn" href="msts-routes.html">Routes</a>
+      <a class="ghost" href="msts-sounds.html">Sounds</a>
+      <a class="ghost" href="genre.html">All pages</a>
+    </div>
+  </section>
+</main>
+<footer class="ft">
+  <div class="ft-top">
+    <div>
+      <a class="logo" href="index.html"><span class="logo-tile"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="2" y="14" width="5" height="8" rx="1.2" fill="currentColor" opacity=".35"></rect><rect x="9.5" y="8" width="5" height="14" rx="1.2" fill="currentColor" opacity=".65"></rect><rect x="17" y="2" width="5" height="20" rx="1.2" fill="currentColor"></rect></svg></span>PIRAVEXBAY</a>
+      <p>India’s free gaming and train sim download hub. Indian routes, locomotives and sounds — always free.</p>
+      <a href="mailto:br46plw06@mozmail.com">br46plw06@mozmail.com</a>
+    </div>
+    <div><h5>Bay</h5><ul><li><a href="msts-addons.html">Addons</a></li><li><a href="msts-routes.html">Routes</a></li><li><a href="msts-sounds.html">Sounds</a></li><li><a href="activity.html">Activities</a></li></ul></div>
+    <div><h5>Explore</h5><ul><li><a href="genre.html">All pages</a></li><li><a href="all-things-by-production.html">Productions</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about-us.html">About</a></li></ul></div>
+    <div><h5>Support</h5><ul><li><a href="tips.html">Tips</a></li><li><a href="msts-donation.html">Donation</a></li><li><a href="privacy-policy.html">Privacy</a></li><li><a href="dmca.html">DMCA</a></li></ul></div>
+  </div>
+  <div class="word">PIRAVEXBAY</div>
+  <div class="bottom"><div>© 2026 <span>Piravexbay</span> · Site by Navmansh Sen</div><div>Free gaming &amp; train sim hub</div></div>
+</footer>
+<script>
+(function(){
+  document.querySelector('.nav-toggle').addEventListener('click',function(){document.getElementById('sheet').classList.toggle('open')});
+  var slides=document.querySelectorAll('.hero .slide'),i=0;
+  setInterval(function(){slides[i].classList.remove('on');i=(i+1)%slides.length;slides[i].classList.add('on')},5200);
+  var feat=document.querySelectorAll('.frame img'),j=0;
+  setInterval(function(){feat[j].classList.remove('on');j=(j+1)%feat.length;feat[j].classList.add('on')},4200);
+  var title=document.getElementById('stitle'),line=document.getElementById('sline'),img=document.getElementById('simg'),link=document.getElementById('slink');
+  document.querySelectorAll('.row').forEach(function(row){
+    row.addEventListener('mouseenter',function(){
+      document.querySelectorAll('.row').forEach(function(r){r.classList.remove('on')});
+      row.classList.add('on');
+      title.textContent=row.dataset.t;
+      line.textContent=row.dataset.d;
+      img.src=row.dataset.img;
+      img.alt=row.dataset.t;
+      link.href=row.getAttribute('href');
+    });
+  });
+})();
+</script>
+<script src="smooth-scroll.js?v=5"></script>
+</body>
+</html>
