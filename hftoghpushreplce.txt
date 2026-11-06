@@ -8,32 +8,6 @@ Total: 61 files on 17 pages
 
 
 ======================================================================
-PAGE: tsdrv7-route-download.html   (11 files)
-PAGE URL: https://piravexbaymsts.dpdns.org/tsdrv7-route-download.html
-----------------------------------------------------------------------
-01. TSDR V7.part01.rar
-    https://huggingface.co/datasets/navmansh/tsdrv7/resolve/main/TSDR%20V7.part01.rar?download=true
-02. TSDR V7.part02.rar
-    https://huggingface.co/datasets/navmansh/tsdrv7/resolve/main/TSDR%20V7.part02.rar?download=true
-03. TSDR V7.part03.rar
-    https://huggingface.co/datasets/navmansh/tsdrv7/resolve/main/TSDR%20V7.part03.rar?download=true
-04. TSDR V7.part04.rar
-    https://huggingface.co/datasets/navmansh/tsdrv7/resolve/main/TSDR%20V7.part04.rar?download=true
-05. TSDR V7.part05.rar
-    https://huggingface.co/datasets/navmansh/tsdrv7/resolve/main/TSDR%20V7.part05.rar?download=true
-06. TSDR V7.part06.rar
-    https://huggingface.co/datasets/navmansh/tsdrv7/resolve/main/TSDR%20V7.part06.rar?download=true
-07. TSDR V7.part07.rar
-    https://huggingface.co/datasets/navmansh/tsdrv7/resolve/main/TSDR%20V7.part07.rar?download=true
-08. TSDR V7.part08.rar
-    https://huggingface.co/datasets/navmansh/tsdrv7/resolve/main/TSDR%20V7.part08.rar?download=true
-09. TSDR V7.part09.rar
-    https://huggingface.co/datasets/navmansh/tsdrv7/resolve/main/TSDR%20V7.part09.rar?download=true
-10. TSDR V7.part10.rar
-    https://huggingface.co/datasets/navmansh/tsdrv7/resolve/main/TSDR%20V7.part10.rar?download=true
-11. TSDR V7.part11.rar
-    https://huggingface.co/datasets/navmansh/tsdrv7/resolve/main/TSDR%20V7.part11.rar?download=true
-
 ======================================================================
 PAGE: euro-truck-simulator-2-fitgirl-repack.html   (4 files)
 PAGE URL: https://piravexbaymsts.dpdns.org/euro-truck-simulator-2-fitgirl-repack.html

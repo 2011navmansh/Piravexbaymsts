@@ -84,6 +84,29 @@ html.has-intro{overflow:hidden}
   .nav .nav-toggle{display:grid}
 }
 </style>
+<style id="latest-stats">
+.lu{position:relative;padding:clamp(38px,4.6vw,64px) var(--gutter) 0;background:var(--bg)}
+.lu-in{max-width:1400px;margin:0 auto}
+.lu-head{display:flex;align-items:flex-end;justify-content:space-between;gap:clamp(24px,4vw,64px);padding:0 0 clamp(22px,2.6vw,30px);border-bottom:1px solid var(--line)}
+.lu-title{font-size:clamp(30px,3.6vw,48px);font-weight:650;letter-spacing:-.05em;line-height:.95}
+.lu-sub{margin-top:10px;font-size:13px;color:var(--muted)}
+.lu-stats{display:flex;align-items:flex-end;flex:none}
+.lu-stat{padding:0 clamp(16px,2.2vw,32px);border-left:1px solid rgba(255,255,255,.09)}
+.lu-stat small{display:block;margin-bottom:5px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(236,235,230,.42)}
+.lu-stat b{display:block;font-size:clamp(20px,2vw,28px);font-weight:700;letter-spacing:-.02em;line-height:1;white-space:nowrap}
+.lu-combined{color:#f0902e}
+@media(max-width:880px){
+  .lu-head{flex-direction:column;align-items:flex-start;gap:26px}
+  .lu-stats{width:100%;justify-content:space-between}
+  .lu-stat:first-child{padding-left:0}
+}
+@media(max-width:560px){
+  .lu-stats{display:grid;grid-template-columns:1fr 1fr;gap:22px 0}
+  .lu-stat{padding:0;border-left:0}
+  .lu-stat:nth-child(even){padding-left:20px;border-left:1px solid rgba(255,255,255,.09)}
+  .lu-stat:nth-child(n+3){padding-top:18px;border-top:1px solid rgba(255,255,255,.09)}
+}
+</style>
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
@@ -187,6 +210,23 @@ html.has-intro{overflow:hidden}
         <ul aria-hidden="true">
           <li>KRG</li><li>BGPRO</li><li>BKS</li><li>TVP</li><li>OSW</li><li>VG</li><li>PA</li><li>MGW</li><li>IRG</li><li>Routes</li><li>Sounds</li><li>Reshades</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="lu" id="latest" aria-labelledby="latest-title">
+    <div class="lu-in">
+      <div class="lu-head">
+        <div>
+          <h2 class="lu-title" id="latest-title">Latest uploads</h2>
+          <p class="lu-sub">Newest first</p>
+        </div>
+        <div class="lu-stats" role="list" aria-label="Library totals">
+          <div class="lu-stat" role="listitem"><small>Sounds</small><b>233</b></div>
+          <div class="lu-stat" role="listitem"><small>Routes</small><b>23</b></div>
+          <div class="lu-stat" role="listitem"><small>Uploads</small><b>377</b></div>
+          <div class="lu-stat" role="listitem"><small>Combined</small><b class="lu-combined">412 GB</b></div>
+        </div>
       </div>
     </div>
   </section>
