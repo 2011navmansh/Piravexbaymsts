@@ -346,7 +346,7 @@ window.AB_LENIS = null;
     { t: 'BKS WAP-7 V3 Horns', m: 'Crisp homing horns and long twin-tone blasts — free download', ty: 'MSTS', u: 'bks-wap7-v3-horns.html' },
     { t: 'BRP Tejas Rajdhani Updated', m: 'Detailed Tejas Express LHB coaches with real interiors — free download', ty: 'MSTS', u: 'brp-tejas-rajdhani.html' },
     { t: 'Dakshina Madhya Railway Route', m: 'Deccan trunk mainline — Secunderabad, Guntakal and Hubli — 5 RAR parts — free', ty: 'MSTS', u: 'dakshina-madhya-railway.html' },
-    { t: 'Ghost Downloader 3', m: 'The best free open-source download manager v4.4.6 — smart chunking, every protocol, Windows, macOS, Linux & Android — free', ty: 'Downloads', u: 'ghost-downloader-3.html' },
+    { t: 'Motrix', m: 'Free open-source download manager v2.3.0 — HTTP, FTP, BitTorrent, Magnet and Metalink, Windows, macOS, Linux & NAS — free', ty: 'Downloads', u: 'motrix-download.html' },
     { t: 'Gallery', m: 'MSTS routes, locomotives, reshades and game screenshots — fullscreen viewer', ty: 'Page', u: 'gallery.html' },
     { t: 'Gallery — Page 2', m: 'MSTS routes, locomotives and screenshots — gallery part 2', ty: 'Page', u: 'gallery2.html' },
     { t: 'Gallery — Page 3', m: 'MSTS routes, locomotives and screenshots — gallery part 3', ty: 'Page', u: 'gallery3.html' },
