@@ -9,30 +9,7 @@ Total: 61 files on 17 pages
 
 ======================================================================
 ======================================================================
-PAGE: euro-truck-simulator-2-fitgirl-repack.html   (4 files)
-PAGE URL: https://piravexbaymsts.dpdns.org/euro-truck-simulator-2-fitgirl-repack.html
-----------------------------------------------------------------------
-01. pr(E)iave(T)xbay(S)nov(2)026.part1.rar
-    https://huggingface.co/datasets/navmansh/v878545457546525/resolve/main/pr%28E%29iave%28T%29xbay%28S%29nov%282%29026.part1.rar?download=true
-02. pr(E)iave(T)xbay(S)nov(2)026.part2.rar
-    https://huggingface.co/datasets/navmansh/v878545457546525/resolve/main/pr%28E%29iave%28T%29xbay%28S%29nov%282%29026.part2.rar?download=true
-03. pr(E)iave(T)xbay(S)nov(2)026.part3.rar
-    https://huggingface.co/datasets/navmansh/v878545457546525/resolve/main/pr%28E%29iave%28T%29xbay%28S%29nov%282%29026.part3.rar?download=true
-04. pr(E)iave(T)xbay(S)nov(2)026.part4.rar
-    https://huggingface.co/datasets/navmansh/v878545457546525/resolve/main/pr%28E%29iave%28T%29xbay%28S%29nov%282%29026.part4.rar?download=true
-
-======================================================================
-PAGE: msts-route-mumbai-v4-update.html   (3 files)
-PAGE URL: https://piravexbaymsts.dpdns.org/msts-route-mumbai-v4-update.html
-----------------------------------------------------------------------
-01. MSTS-8glncjbwmsas.zip.001
-    https://huggingface.co/datasets/navmansh/v34563457667/resolve/main/MSTS-8glncjbwmsas.zip.001?download=true
-02. MSTS-8glncjbwmsas.zip.002
-    https://huggingface.co/datasets/navmansh/v34563457667/resolve/main/MSTS-8glncjbwmsas.zip.002?download=true
-03. MSTS-8glncjbwmsas.zip.003
-    https://huggingface.co/datasets/navmansh/v34563457667/resolve/main/MSTS-8glncjbwmsas.zip.003?download=true
-
-======================================================================
+===============================
 PAGE: bgpro-icf-raj-download.html   (1 files)
 PAGE URL: https://piravexbaymsts.dpdns.org/bgpro-icf-raj-download.html
 ----------------------------------------------------------------------
