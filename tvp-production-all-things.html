@@ -182,7 +182,7 @@ code{font-family:var(--mono);font-size:12px;color:#fff}
     <div class="eye"><i></i>2 packs · 23 GB full set · free</div>
     <h1>TVP. Two shelves.</h1>
     <p class="lede">Grab the complete TVP Full Pack 2025 in one go, open the WDG4G locomotive pack on its own download page, or jump straight to all 122 files with direct links.</p>
-    <div class="hero-acts"><a class="btn" href="#files">All 122 files</a><a class="ghost" href="#rows">Browse the shelves</a></div>
+    <div class="hero-acts"><a class="btn" href="#files">All 124 downloads</a><a class="ghost" href="all-things-by-production.html">All Things by Production</a></div>
   </div>
 </header>
 <section class="sec">
@@ -201,31 +201,18 @@ code{font-family:var(--mono);font-size:12px;color:#fff}
     
   </div>
 </section>
-<section class="sec">
-  <div class="wrap">
-    <div class="eye"><i></i>2 packs · 23 GB full set · free</div>
-    <h2>Both TVP shelves. Hover to preview.</h2>
-    <div class="idx">
-      <div class="rows" id="rows">
-<a href="tvp-full-pack-2025.html" class="row on" data-t="TVP Full Pack 2025" data-d="The complete TVP Production stock collection. One 7z archive split into eleven parts, each with a direct download link and its file size."><span class="n">01</span><span><h3>TVP Full Pack 2025</h3><p>11 Files · 23 GB · MSTS + Open Rails</p></span><em>Page</em></a>
-<a href="tvp-wdg4g-pack-download.html" class="row" data-t="TVP_WDG4G PACK" data-d="The TVP WDG4G diesel locomotive pack. Model, cab and tuned diesel sound set, ready for TRAINSET."><span class="n">02</span><span><h3>TVP_WDG4G PACK</h3><p>WDG4G Diesel Loco · MSTS + Open Rails</p></span><em>Page</em></a>
-      </div>
-      <aside class="side"><img id="simg" hidden alt="">
-<video id="svid" hidden controls preload="metadata" playsinline></video>
-<div><div class="meta">Live preview</div><strong id="stitle">TVP Full Pack 2025</strong><p id="sline">The complete TVP Production stock collection. One 7z archive split into eleven parts, each with a direct download link and its file size.</p><a id="slink" href="tvp-full-pack-2025.html">Open this page →</a></div></aside>
-    </div>
-  </div>
-</section>
 <section class="sec" id="files">
   <div class="wrap">
-    <div class="eye"><i></i>All files &middot; 122 assets</div>
-    <h2>All 122 files. Direct links.</h2>
-    <p class="lede">Every archive in the TVP release, listed with its exact file name, size and a direct download link. No sign-up, no redirects, no extra steps.</p>
+    <div class="eye"><i></i>All files &middot; 122 assets &middot; 2 packs</div>
+    <h2>Every file. Every link.</h2>
+    <p class="lede">Both TVP packs and every archive in the release, listed with its exact file name, size and a direct download link. No sign-up, no redirects, no extra steps.</p>
     <div class="files-bar">
       <input id="fq" type="search" placeholder="Search file name&hellip;" aria-label="Search file name" autocomplete="off">
-      <span id="fcount">122 files</span>
+      <span id="fcount">124 items</span>
     </div>
     <div class="files" id="filelist">
+<a class="file file-pack" href="tvp-full-pack-2025.html" data-n="TVP Full Pack 2025"><span class="file-name">TVP Full Pack 2025</span><span class="file-size">23 GB</span><span class="file-tag">PACK</span><span class="file-dl">Open <i>&rarr;</i></span></a>
+<a class="file file-pack" href="tvp-wdg4g-pack-download.html" data-n="TVP_WDG4G PACK"><span class="file-name">TVP_WDG4G PACK</span><span class="file-size">1.49 GB</span><span class="file-tag">PACK</span><span class="file-dl">Open <i>&rarr;</i></span></a>
 <a class="file" href="https://github.com/premiumcaps11-design/ANkovx-copyrighted/releases/download/versakafarsa/chochesCSMTM_GADAG.7z" target="_blank" download rel="noopener" data-n="chochesCSMTM_GADAG.7z"><span class="file-name">chochesCSMTM_GADAG.7z</span><span class="file-size">272 MB</span><span class="file-tag">7Z</span><span class="file-dl">Download <i>&rarr;</i></span></a>
 <a class="file" href="https://github.com/premiumcaps11-design/ANkovx-copyrighted/releases/download/versakafarsa/chochesMAX_ANVTBGP.BSB.GAYA.JYG.MFP.SHC_GARIBRATH.7z" target="_blank" download rel="noopener" data-n="chochesMAX_ANVTBGP.BSB.GAYA.JYG.MFP.SHC_GARIBRATH.7z"><span class="file-name">chochesMAX_ANVTBGP.BSB.GAYA.JYG.MFP.SHC_GARIBRATH.7z</span><span class="file-size">476 MB</span><span class="file-tag">7Z</span><span class="file-dl">Download <i>&rarr;</i></span></a>
 <a class="file" href="https://github.com/premiumcaps11-design/ANkovx-copyrighted/releases/download/versakafarsa/chochesMAX_AZAD_HIND.7z" target="_blank" download rel="noopener" data-n="chochesMAX_AZAD_HIND.7z"><span class="file-name">chochesMAX_AZAD_HIND.7z</span><span class="file-size">644 MB</span><span class="file-tag">7Z</span><span class="file-dl">Download <i>&rarr;</i></span></a>
@@ -387,25 +374,6 @@ code{font-family:var(--mono);font-size:12px;color:#fff}
   document.querySelector('.nav-toggle').addEventListener('click',function(){document.getElementById('sheet').classList.toggle('open')});
   var slides=document.querySelectorAll('.slide');
   if(slides.length>1){var i=0;setInterval(function(){slides[i].classList.remove('on');i=(i+1)%slides.length;slides[i].classList.add('on')},4200)}
-  var label='Open this file →';
-  document.querySelectorAll('#rows .row').forEach(function(row){
-    row.addEventListener('mouseenter',function(){
-      document.querySelectorAll('#rows .row').forEach(function(r){r.classList.remove('on')});
-      row.classList.add('on');
-      document.getElementById('stitle').textContent=row.dataset.t;
-      document.getElementById('sline').textContent=row.dataset.d;
-      var link=document.getElementById('slink');
-      link.href=row.getAttribute('href');
-      link.textContent=row.getAttribute('target')?label:'Open this page →';
-      if(row.getAttribute('target')){link.target='_blank';link.rel='noopener'}else{link.removeAttribute('target');link.removeAttribute('rel')}
-      var img=document.getElementById('simg'),vid=document.getElementById('svid');
-      if(vid){vid.pause();vid.hidden=true}
-      if(img){
-        if(row.dataset.img){img.src=row.dataset.img;img.alt=row.dataset.t;img.hidden=false}
-        else img.hidden=true;
-      }
-    });
-  });
 })();
 </script>
 <script>
@@ -417,7 +385,7 @@ code{font-family:var(--mono);font-size:12px;color:#fff}
   q.addEventListener('input',function(){
     var v=q.value.trim().toLowerCase(),n=0;
     items.forEach(function(el){var hit=!v||el.dataset.n.toLowerCase().indexOf(v)>-1;el.hidden=!hit;if(hit)n++});
-    count.textContent=n+(n===1?' file':' files');
+    count.textContent=n+(n===1?' item':' items');
     empty.classList.toggle('on',n===0);
   });
 })();
