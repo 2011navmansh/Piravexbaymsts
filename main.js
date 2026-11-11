@@ -370,7 +370,7 @@ window.AB_LENIS = null;
     { t: 'MSTS Loop Horn Maker', m: 'Create, loop and export your own horn sounds for MSTS — free download', ty: 'MSTS', u: 'msts-loop-horn-maker.html' },
     { t: 'ECR 2.0 Gaya Update', m: 'East Central Railway Grand Chord through Gaya Jn — one download link — free', ty: 'MSTS', u: 'msts-route-ecr-gaya.html' },
     { t: 'Grand Deccan Route', m: 'Chennai Central to Bangalore via Jolarpettai — one download link — free', ty: 'MSTS', u: 'msts-route-grand-deccan.html' },
-    { t: 'Kamakhya Guwahati Dibrugarh Update', m: 'NFR trunk route across the Brahmaputra valley — 5 RAR parts — free', ty: 'MSTS', u: 'msts-route-kamakhya-guwahati-dibrugarh.html' },
+    { t: 'Kamakhya Guwahati Dibrugarh Update', m: 'NFR trunk route across the Brahmaputra valley — one download link — free', ty: 'MSTS', u: 'msts-route-kamakhya-guwahati-dibrugarh.html' },
     { t: 'KRG Kerala V2 Route', m: 'Kerala route updated V2 — 3 RAR parts — free download', ty: 'MSTS', u: 'msts-route-krg-kerala-v2.html' },
     { t: 'Mumbai V4 Update Route', m: 'Mumbai suburban Western, Central and Harbour lines — 3 ZIP parts — free', ty: 'MSTS', u: 'msts-route-mumbai-v4-update.html' },
     { t: 'Narmada V2 Route', m: 'West Central Railway Narmada valley corridor — 4 RAR parts — free', ty: 'MSTS', u: 'msts-route-narmada-v2.html' },
