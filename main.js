@@ -190,7 +190,7 @@ window.AB_LENIS = null;
     { t: 'UZAIR_LHB_V1', m: 'LHB sound pack V1 — free rar download', ty: 'MSTS', u: 'uzair-lhb-v1-download.html' },
     { t: 'UZAIR_MEMU', m: 'MEMU sound pack — free rar download', ty: 'MSTS', u: 'uzair-memu-download.html' },
     { t: 'OSW Production', m: 'OSW production collection — Amrit Bharat trainsets and the WAP5 locomotive', ty: 'MSTS', u: 'osw-production.html' },
-    { t: 'KRG PRODUCTION', m: 'KRG PRODUCTION locomotive packs - 79 files, each with its own free download page', ty: 'MSTS', u: 'krg-production-all-things.html' },
+    { t: 'KRG PRODUCTION', m: 'KRG PRODUCTION locomotive packs - 79 files, each with its own free download page', ty: 'MSTS', u: 'https://link-vault.org/c/RfiQ7REL' },
     { t: 'BRC_P5_KRG_WAP5_30068_30073', m: 'KRG WAP-5 BRC P5 30068 and 30073. Vadodara shed electric passenger locomotive pack for Microsoft Train Simulator and Open Rails. - 134.9 MB - free download', ty: 'MSTS', u: 'brc-p5-krg-wap5-30068-30073-download.html' },
     { t: 'KRG_HWH_wap4_KRG_HWH', m: 'KRG Howrah WAP-4. Howrah shed electric passenger locomotive pack for Microsoft Train Simulator and Open Rails. - 60.1 MB - free download', ty: 'MSTS', u: 'krg-hwh-wap4-krg-hwh-download.html' },
     { t: 'KRG_WAG_5_JMP_27170', m: 'KRG WAG-5 Jamalpur 27170. Jamalpur shed freight electric locomotive pack for Microsoft Train Simulator and Open Rails. - 112.2 MB - free download', ty: 'MSTS', u: 'krg-wag-5-jmp-27170-download.html' },
