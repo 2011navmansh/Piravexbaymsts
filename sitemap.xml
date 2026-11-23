@@ -113,11 +113,6 @@
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://piravexbaymsts.dpdns.org/bgpro-3-phase-locos.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
        <loc>https://piravexbaymsts.dpdns.org/bks-wap7-v3-horns.html</loc>
        <lastmod>2026-11-01T11:20:34+00:00</lastmod>
        <priority>0.6400</priority>
@@ -134,11 +129,6 @@
   </url>
   <url>
        <loc>https://piravexbaymsts.dpdns.org/jerryflow-v2-ae-plugin.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/bgpro-acemu.html</loc>
        <lastmod>2026-11-01T11:20:34+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
@@ -224,11 +214,6 @@
   </url>
   <url>
        <loc>https://piravexbaymsts.dpdns.org/bgpro-locos.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.5120</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/brp-tejas-rajdhani.html</loc>
        <lastmod>2026-11-01T11:20:34+00:00</lastmod>
        <priority>0.5120</priority>
   </url>
@@ -408,21 +393,6 @@
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://piravexbaymsts.dpdns.org/bgpro-acemu-download.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.5600</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/bgpro-bombardier-emu-download.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.5600</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/bgpro-lhb-default-sound-download.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
        <loc>https://piravexbaymsts.dpdns.org/mgw-lhb-v9-combo-download.html</loc>
        <lastmod>2026-11-01T11:20:34+00:00</lastmod>
        <priority>0.6400</priority>
@@ -464,21 +434,6 @@
   </url>
   <url>
        <loc>https://piravexbaymsts.dpdns.org/osw-amrit-bharat-download.html</loc>
-       <lastmod>2026-11-01T11:20:35+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/tvp-production.html</loc>
-       <lastmod>2026-11-01T11:20:35+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/tvp-wcam1-rainbow-download.html</loc>
-       <lastmod>2026-11-01T11:20:35+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/tvp-freight-download.html</loc>
        <lastmod>2026-11-01T11:20:35+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
@@ -817,76 +772,11 @@
        <lastmod>2026-11-01T11:20:34+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/bgpro-all-lhb-pack-download.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/bgpro-amrit-bharat-trainset-download.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/bgpro-common-download.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/bgpro-emd-wdg4d-download.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-    <url>
-          <loc>https://piravexbaymsts.dpdns.org/bgpro-2026-pack-wap7-download.html</loc>
-          <lastmod>2026-11-05T00:00:00+00:00</lastmod>
-          <priority>0.6400</priority>
-     </url>
     <url>
           <loc>https://piravexbaymsts.dpdns.org/ed-hwh-tricol-livery-2x-download.html</loc>
           <lastmod>2026-11-05T00:00:00+00:00</lastmod>
           <priority>0.6400</priority>
      </url>
-   <url>
-        <loc>https://piravexbaymsts.dpdns.org/bgpro-emd-wdg4-download.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/bgpro-emd-wdp4b-download.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/bgpro-emd-wdp4d-download.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/bgpro-freight-pack-2025-download.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/bgpro-icf-download.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/bgpro-icf-gr-download.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/bgpro-icf-raj-download.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/bgpro-wdm3a-rebuilts-download.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
   <url>
        <loc>https://piravexbaymsts.dpdns.org/bks-ai-horns-packs-v2-download.html</loc>
        <lastmod>2026-11-01T11:20:34+00:00</lastmod>
@@ -934,21 +824,6 @@
   </url>
   <url>
        <loc>https://piravexbaymsts.dpdns.org/bks-wap7-v3-horns-download.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/broad-gauge-productions.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/broad-gauge-productions-caboose-download.html</loc>
-       <lastmod>2026-11-01T11:20:34+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/brp-production-all-things.html</loc>
        <lastmod>2026-11-01T11:20:34+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
@@ -1551,17 +1426,7 @@
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://piravexbaymsts.dpdns.org/sg-lhb-v1-download.html</loc>
-       <lastmod>2026-11-01T11:20:35+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
        <loc>https://piravexbaymsts.dpdns.org/sg-production-all-things.html</loc>
-       <lastmod>2026-11-01T11:20:35+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/sg-sound-icf-v1-download.html</loc>
        <lastmod>2026-11-01T11:20:35+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
@@ -1670,37 +1535,12 @@
        <priority>0.6400</priority>
   </url>
   <url>
-       <loc>https://piravexbaymsts.dpdns.org/tvp-lhb-sound-download.html</loc>
-       <lastmod>2026-11-01T11:20:35+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/tvp-production-all-things.html</loc>
-       <lastmod>2026-11-01T11:20:35+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
        <loc>https://piravexbaymsts.dpdns.org/ultra-icf-v1-download.html</loc>
        <lastmod>2026-11-01T11:20:35+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://piravexbaymsts.dpdns.org/vb-v1-download.html</loc>
-       <lastmod>2026-11-01T11:20:35+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/vg-all-things-2026.html</loc>
-       <lastmod>2026-11-01T11:20:35+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/vg-production.html</loc>
-       <lastmod>2026-11-01T11:20:35+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/vg-production-assets.html</loc>
        <lastmod>2026-11-01T11:20:35+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
@@ -1795,16 +1635,6 @@
   </url>
   <url>
        <loc>https://piravexbaymsts.dpdns.org/tsre5.html</loc>
-       <lastmod>2026-11-01T11:20:35+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/tvp-full-pack-2025.html</loc>
-       <lastmod>2026-11-01T11:20:35+00:00</lastmod>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://piravexbaymsts.dpdns.org/tvp-wdg4g-pack-download.html</loc>
        <lastmod>2026-11-01T11:20:35+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
