@@ -34,7 +34,9 @@
     return false;
   }
   setInterval(function () {
-    if (devtoolsOpen()) { try { location.reload(); } catch (e) {} }
+    var t = Date.now();
+    try { debugger; } catch (e) {}
+    if (Date.now() - t > 100 || devtoolsOpen()) { try { location.reload(); } catch (e) {} }
   }, 1000);
 })();
 
