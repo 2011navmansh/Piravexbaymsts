@@ -1,3 +1,43 @@
+/* Media guard: block devtools shortcuts and the video save/copy context menu. */
+(function () {
+  'use strict';
+  if (window.__AB_MEDIA_GUARD) return;
+  window.__AB_MEDIA_GUARD = true;
+
+  document.addEventListener('keydown', function (e) {
+    var k = (e.key || '').toLowerCase();
+    if (k === 'f12' || e.keyCode === 123) { e.preventDefault(); return false; }
+    if (e.ctrlKey && e.shiftKey && (k === 'i' || k === 'j' || k === 'c')) { e.preventDefault(); return false; }
+    if (e.ctrlKey && !e.shiftKey && k === 'u') { e.preventDefault(); return false; }
+  }, true);
+
+  document.addEventListener('contextmenu', function (e) {
+    var t = e.target;
+    if (t && t.tagName === 'VIDEO') { e.preventDefault(); return false; }
+  }, true);
+
+  function markVideos() {
+    try {
+      var vids = document.querySelectorAll('video');
+      for (var i = 0; i < vids.length; i++) vids[i].setAttribute('controlsList', 'nodownload');
+    } catch (err) {}
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', markVideos);
+  else markVideos();
+
+  /* If devtools still gets opened (menu / Inspect), reload the page. Ctrl+F is untouched. */
+  function devtoolsOpen() {
+    try {
+      if (window.outerWidth - window.innerWidth > 200) return true;
+      if (window.outerHeight - window.innerHeight > 200) return true;
+    } catch (e) {}
+    return false;
+  }
+  setInterval(function () {
+    if (devtoolsOpen()) { try { location.reload(); } catch (e) {} }
+  }, 1000);
+})();
+
 (function () {
   'use strict';
   if (window.__AB_SMOOTH) return;
