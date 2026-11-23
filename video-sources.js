@@ -12,7 +12,8 @@
     'ABV6': 'https://huggingface.co/datasets/navmansh/v45675467/resolve/main/How%20to%20create%20activity%20in%20MSTS%20Tutorial%20_%20Commentary%20_%20MSTS%20Open%20Rails.mp4',
     'ABV7': 'https://huggingface.co/datasets/navmansh/videoss/resolve/main/DMR-1.mp4',
     'ABV8': 'https://www.kaggle.com/api/v1/datasets/download/navmansh/uuiiihshhshhshhss/qq.mp4?datasetVersionNumber=1',
-    'ABV9': 'https://www.kaggle.com/api/v1/datasets/download/navmansh/ptcgihhgnnmsts-mp4/ptcgihhgnnmsts.mp4?datasetVersionNumber=1'
+    'ABV9': 'https://www.kaggle.com/api/v1/datasets/download/navmansh/ptcgihhgnnmsts-mp4/ptcgihhgnnmsts.mp4?datasetVersionNumber=1',
+    'ABV10': 'https://www.kaggle.com/api/v1/datasets/download/navmansh/yyyyyydgggd-mp4-104-mb/yyyyyydgggd.mp4?datasetVersionNumber=1'
   };
   function apply() {
     var vids = document.querySelectorAll("[data-vsrc]");
