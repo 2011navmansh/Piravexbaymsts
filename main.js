@@ -269,7 +269,6 @@ window.AB_LENIS = null;
     { t: 'GTA.San.Andreas.Repack', m: 'GTA San Andreas v2.0 classic open-world action repack — free download', ty: 'Downloads', u: 'gta-san-andreas-repack.html' },
     { t: 'Horn by BK — 11 Horns Pack', m: '11 hand-tuned Indian loco horns in one classic collection — free rar download', ty: 'MSTS', u: 'horn-by-bk-11-horns-pack.html' },
     { t: 'JerryFlow.V2 AE Plugin', m: 'JerryFlow V2 effect and flow plugin for After Effects — free download', ty: 'Downloads', u: 'jerryflow-v2-ae-plugin.html' },
-    { t: 'JJJPro_Double_Decker', m: 'JJJ Double Decker coach pack, Yellow-Red & Yellow-Green liveries — free download', ty: 'MSTS', u: 'jjjpro-double-decker.html' },
     { t: 'KERELA V2 UPDATE ACTS', m: 'Kerala Express, Parasuram, Tirunelveli Humsafar activities — free download', ty: 'MSTS', u: 'kerela-v2-update-acts.html' },
     { t: 'KHANDESH DHULE UPDATE ACTS', m: 'Deccan Queen anniversary, CSMT-Nagpur Duronto activities — free download', ty: 'MSTS', u: 'khandesh-dhule-update-acts.html' },
     { t: 'KONKAN COASTAL KULEM (DUDSAGAR) ACTS', m: 'Goa Express, Vasco-Secunderabad Express activities — free download', ty: 'MSTS', u: 'konkan-coastal-kulem-dudsagar-update-acts.html' },
