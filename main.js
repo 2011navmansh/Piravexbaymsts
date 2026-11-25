@@ -289,7 +289,7 @@ window.AB_LENIS = null;
     { t: 'Download SHRI SALASAR LUDHINA UPDATE', m: 'All 13 RAR parts on one page — ~26.5 GB — free download', ty: 'MSTS', u: 'shri-salasar-ludhina-update-download.html' },
     { t: 'SHRI SALASAR LUDHINA UPDATE', m: 'Shri Salasar Route Ludhiana Jn update — 13 RAR parts — free', ty: 'MSTS', u: 'shri-salasar-ludhina-update.html' },
     { t: 'Sounds by BKS', m: '10 hand-tuned Indian horn packs — WAP-7, WAP-5, WAG-9, EMD, AI', ty: 'MSTS', u: 'sounds-by-bks.html' },
-    { t: 'TSCR-V2-KZJ Update Activities', m: '19 ready-to-run Kazipet Junction activities — free downloads', ty: 'MSTS', u: 'tscr-v2-kzj-update-acts.html' },
+    { t: 'TSCR-V2-KZJ Update Activities', m: '19 ready-to-run Kazipet Junction activities — free downloads', ty: 'MSTS', u: 'https://linkhost.dpdns.org/tscr-kjz-update-acts.html' },
     { t: 'Download TSDRV7', m: 'TSD Route V7 full build — 11 split RAR parts, ~19.03 GB — free', ty: 'MSTS', u: 'tsdrv7-route-download.html' },
     { t: 'Windows 7 Official ISO', m: 'Genuine untouched x64 installation media for MSTS — free download', ty: 'Downloads', u: 'windows-7-official-iso.html' },
     { t: 'WRV12 Activities', m: '57 Western Railways V12 activities — Shatabdi to Vande Bharat — free', ty: 'MSTS', u: 'https://linkhost.dpdns.org/western-railways-v12-acts.html' },
