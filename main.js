@@ -292,7 +292,7 @@ window.AB_LENIS = null;
     { t: 'TSCR-V2-KZJ Update Activities', m: '19 ready-to-run Kazipet Junction activities — free downloads', ty: 'MSTS', u: 'tscr-v2-kzj-update-acts.html' },
     { t: 'Download TSDRV7', m: 'TSD Route V7 full build — 11 split RAR parts, ~19.03 GB — free', ty: 'MSTS', u: 'tsdrv7-route-download.html' },
     { t: 'Windows 7 Official ISO', m: 'Genuine untouched x64 installation media for MSTS — free download', ty: 'Downloads', u: 'windows-7-official-iso.html' },
-    { t: 'WRV12 Activities', m: '57 Western Railways V12 activities — Shatabdi to Vande Bharat — free', ty: 'MSTS', u: 'wrv12-activities.html' },
+    { t: 'WRV12 Activities', m: '57 Western Railways V12 activities — Shatabdi to Vande Bharat — free', ty: 'MSTS', u: 'https://linkhost.dpdns.org/western-railways-v12-acts.html' },
   ];
 
   /* Full-site index (search-index.js) loads only when search is opened. */
