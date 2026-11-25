@@ -285,7 +285,7 @@ window.AB_LENIS = null;
     { t: 'NFR V2.2 Latest Route Acts', m: '6 ready-to-run NFR V2.2 activities — free downloads', ty: 'MSTS', u: 'nfr-v2-2-latest-route-acts.html' },
     { t: 'Predator Helios 300 PH3115-51 Safety Guide', m: 'Official safety guide PDF — setup, battery care, precautions — free download', ty: 'Guides', u: 'predator-helios-300-ph3115-51-safety-guide.html' },
     { t: 'Predator Helios 300 PH3115-51 Service Guide', m: 'Complete teardown, disassembly and reassembly manual PDF — free download', ty: 'Guides', u: 'predator-helios-300-ph3115-51-service-guide.html' },
-    { t: 'SHRI SALASAR LUDHINA UPDATE ACTS', m: '16 activities for the Ludhiana Junction update — free downloads', ty: 'MSTS', u: 'shri-salasar-ludhina-update-acts.html' },
+    { t: 'SHRI SALASAR LUDHINA UPDATE ACTS', m: '16 activities for the Ludhiana Junction update — free downloads', ty: 'MSTS', u: 'https://linkhost.dpdns.org/shri-salasar-msts-acts.html' },
     { t: 'Download SHRI SALASAR LUDHINA UPDATE', m: 'All 13 RAR parts on one page — ~26.5 GB — free download', ty: 'MSTS', u: 'shri-salasar-ludhina-update-download.html' },
     { t: 'SHRI SALASAR LUDHINA UPDATE', m: 'Shri Salasar Route Ludhiana Jn update — 13 RAR parts — free', ty: 'MSTS', u: 'shri-salasar-ludhina-update.html' },
     { t: 'Sounds by BKS', m: '10 hand-tuned Indian horn packs — WAP-7, WAP-5, WAG-9, EMD, AI', ty: 'MSTS', u: 'sounds-by-bks.html' },
