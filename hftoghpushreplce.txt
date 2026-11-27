@@ -38,8 +38,6 @@ PAGE URL: https://piravexbaymsts.dpdns.org/rc-production-all-things.html
     https://huggingface.co/datasets/navmansh/RC-DRM-PARAKH-INSPECTION-VAN/resolve/main/RC%20DRM%20PARAKH%20INSPECTION%20VAN.rar?download=true
 
 ======================================================================
-PAGE: ace-to-dds-converter-for-msts.html   (1 files)
-PAGE URL: https://piravexbaymsts.dpdns.org/ace-to-dds-converter-for-msts.html
 ----------------------------------------------------------------------
 01. ACE to DDS converter for MSTS.7z
     https://huggingface.co/datasets/navmansh/ACE-to-DDS-converter-for-MSTS/resolve/main/ACE%20to%20DDS%20converter%20for%20MSTS.7z?download=true
